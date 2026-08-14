@@ -1,0 +1,19 @@
+---
+subject: Mathematics
+grade: 10
+chapter: Quadratic Equations
+---
+
+A quadratic equation in the variable x is an equation of the form a x squared plus b x plus c equals zero, where a, b and c are real numbers and a is not equal to zero. This is called the standard form of a quadratic equation. The condition that a is not zero is essential, because if a were zero the equation would reduce to a linear equation. Any equation of the form p of x equals zero, where p of x is a polynomial of degree two, is a quadratic equation, and when the terms of p of x are written in descending order of their degrees the standard form is obtained.
+
+A real number alpha is called a root of the quadratic equation a x squared plus b x plus c equals zero if a times alpha squared plus b times alpha plus c equals zero. The zeroes of the quadratic polynomial a x squared plus b x plus c and the roots of the corresponding quadratic equation are the same thing. A quadratic equation has at most two roots.
+
+One method of solving a quadratic equation is factorisation, which relies on the fact that if the product of two numbers is zero then at least one of them must be zero. The middle term b x is split into two terms whose coefficients add up to b and whose product equals the product of a and c. The expression is then grouped and written as a product of two linear factors, and each factor is set equal to zero to give the roots. Factorisation works quickly when the numbers involved are convenient, but it is not always practical.
+
+A second method is completing the square. In this method the quadratic expression is converted into the form of a perfect square plus or minus a constant, by adding and subtracting the square of half the coefficient of x after dividing throughout by a. Once the equation is written as a perfect square equal to a number, the square root of both sides is taken and the two roots are read off. Completing the square works for every quadratic equation, and applying it to the general equation produces a formula for the roots.
+
+The quadratic formula states that the roots of a x squared plus b x plus c equals zero are given by negative b plus or minus the square root of the quantity b squared minus four a c, all divided by two a. The expression b squared minus four a c is called the discriminant of the quadratic equation and is usually denoted by D. The formula is valid provided the discriminant is greater than or equal to zero, because the square root of a negative number is not a real number.
+
+The discriminant decides the nature of the roots without solving the equation. If the discriminant is greater than zero, the equation has two distinct real roots. If the discriminant is equal to zero, the equation has two equal real roots, and the repeated root is negative b by two a. If the discriminant is less than zero, the equation has no real roots. Geometrically these three cases correspond to the parabola cutting the x axis at two points, touching it at exactly one point, and not meeting it at all.
+
+Quadratic equations arise naturally in word problems. The usual method is to represent the unknown quantity by a variable, translate the conditions of the problem into an equation, reduce it to standard form, and then solve it by factorisation or by the quadratic formula. Problems about the product of two consecutive integers, about the area and dimensions of a rectangular plot, about the ages of two people some years ago or hence, about the speed of a train or a boat in still water, and about the time taken by two taps to fill a tank all lead to quadratic equations. When the equation gives two roots, each root must be checked against the conditions of the original problem, and a root that is negative or otherwise meaningless in the context, such as a negative length, a negative age or a negative speed, is rejected.

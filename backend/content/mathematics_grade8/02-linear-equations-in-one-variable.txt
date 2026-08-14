@@ -1,0 +1,19 @@
+---
+subject: Mathematics
+grade: 8
+chapter: Linear Equations in One Variable
+---
+
+An algebraic expression is formed from variables and constants using the operations of addition, subtraction, multiplication and division. An equation is a condition on a variable that states that two expressions are equal in value. The expression on the left of the equality sign is called the left hand side, and the expression on the right is called the right hand side. A linear equation in one variable is an equation in which the expressions involve only one variable and the highest power of that variable is one. Because the power is one, the graph of such an equation is a straight line, which is where the word linear comes from.
+
+The value of the variable for which the left hand side and the right hand side of the equation become equal is called the solution or the root of the equation. A linear equation in one variable has exactly one solution. Substituting the solution back into the original equation and checking that both sides give the same value is the standard way of verifying an answer.
+
+Equations are solved by performing the same mathematical operation on both sides, so that the equality is preserved. The same number may be added to both sides, subtracted from both sides, or both sides may be multiplied or divided by the same non-zero number. Because these operations keep the two sides balanced, the new equation obtained has the same solution as the original one. An equation can be compared to a balance with equal weights on both pans: whatever is done to one pan must be done to the other for the balance to remain level.
+
+A shorter way of applying these operations is transposing. Transposing a number or a term means moving it from one side of the equation to the other with its sign changed. A term that is added on one side becomes subtracted on the other, and a term that is multiplied on one side becomes divided on the other. Transposing is not a new rule; it is simply a compact way of writing the step of adding or subtracting the same quantity on both sides.
+
+Many linear equations have variables on both sides. Such equations are solved by first bringing all the terms containing the variable to one side and all the constant terms to the other side, and then simplifying. When the equation contains brackets, the brackets are opened first using the distributive property, and like terms are collected before transposing.
+
+Some equations are not linear to begin with but can be reduced to linear form. When an equation is written as one expression divided by another expression equals a number, it is solved by multiplying both sides by the denominator, a step called cross multiplication. Equations involving fractions with different denominators are simplified by multiplying both sides by the least common multiple of all the denominators, which clears the fractions and leaves an ordinary linear equation.
+
+Linear equations are used to solve word problems from everyday life. The usual method is to read the statement carefully, decide what the unknown quantity is and denote it by a variable, express the other quantities in the problem in terms of that variable, form an equation from the condition given in the problem, solve the equation, and finally check that the answer satisfies the original conditions of the problem. Problems about the ages of two people, about consecutive numbers, about the digits of a two digit number, about the perimeter of a rectangle, about the sharing of money and about distance, speed and time can all be modelled in this way. When forming the equation for a two digit number, the number itself is written as ten times the tens digit plus the units digit, and reversing the digits gives ten times the units digit plus the tens digit.

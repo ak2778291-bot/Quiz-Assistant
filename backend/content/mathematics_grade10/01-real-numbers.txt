@@ -1,0 +1,21 @@
+---
+subject: Mathematics
+grade: 10
+chapter: Real Numbers
+---
+
+The Fundamental Theorem of Arithmetic states that every composite number can be expressed as a product of primes, and that this factorisation is unique apart from the order in which the prime factors occur. Because the order does not matter, the factorisation is usually written with the primes in ascending order. The theorem has many consequences, and it is the basis of almost every result about divisibility of integers.
+
+The Fundamental Theorem of Arithmetic gives a direct method of computing the highest common factor and the lowest common multiple of two numbers. The highest common factor of two numbers is the product of the smallest power of each common prime factor of the numbers. The lowest common multiple is the product of the greatest power of each prime factor involved in the numbers. For any two positive integers a and b, the product of their highest common factor and their lowest common multiple equals the product of a and b. This relation holds only for two numbers and does not extend directly to three or more.
+
+An important application of the theorem is to decide when a number of the form a raised to the power n can end in the digit zero. A number ends in zero only if it is divisible by ten, that is, by both two and five. Since the prime factorisation of a number is unique, a number whose prime factorisation contains no five can never end in zero.
+
+A number is called irrational if it cannot be written in the form p by q, where p and q are integers and q is not zero. The square root of two, the square root of three and the number pi are irrational. The proof that the square root of two is irrational uses the method of contradiction: it begins by assuming that the square root of two can be written as p by q in lowest terms, and derives from that assumption the conclusion that p and q have a common factor of two, which contradicts the assumption that the fraction was in lowest terms. A supporting result used in this proof is that if a prime number p divides a squared, then p also divides a. In general, for any prime number p, the square root of p is irrational.
+
+The sum or difference of a rational and an irrational number is irrational, and the product or quotient of a non-zero rational number with an irrational number is also irrational. These facts are proved in the same way, by assuming the result is rational and deriving a contradiction.
+
+Rational numbers have a characteristic decimal expansion. The decimal expansion of every rational number is either terminating or non-terminating repeating, and conversely, a number whose decimal expansion is terminating or non-terminating repeating is rational. A number whose decimal expansion is non-terminating and non-repeating is irrational.
+
+The exact form of the decimal expansion of a rational number depends on the prime factorisation of its denominator. Let x be a rational number written as p by q in lowest terms. If the prime factorisation of q is of the form two raised to n multiplied by five raised to m, where n and m are non-negative integers, then the decimal expansion of x terminates. If the denominator q in lowest terms has any prime factor other than two or five, then the decimal expansion of x does not terminate and is instead non-terminating repeating. This is because a decimal terminates exactly when the fraction can be rewritten with a denominator that is a power of ten, and ten has only the prime factors two and five.
+
+Real numbers are the collection of all rational and irrational numbers together. Every real number corresponds to a unique point on the number line, and every point on the number line corresponds to a unique real number, which is why the number line is often called the real line.

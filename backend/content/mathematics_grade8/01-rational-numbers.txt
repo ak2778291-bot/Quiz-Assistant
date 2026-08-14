@@ -1,0 +1,21 @@
+---
+subject: Mathematics
+grade: 8
+chapter: Rational Numbers
+---
+
+A rational number is a number that can be written in the form p by q, where p and q are integers and q is not equal to zero. Natural numbers, whole numbers and integers are all rational numbers, because any integer can be written with a denominator of one. Fractions such as three by five and negative seven by two are also rational numbers.
+
+Rational numbers are closed under addition, subtraction and multiplication. This means that when two rational numbers are added, subtracted or multiplied, the result is always a rational number. Rational numbers are not closed under division, because division by zero is not defined; however, if zero is excluded, the collection of non-zero rational numbers is closed under division. Whole numbers, in contrast, are not closed under subtraction or division, and integers are not closed under division.
+
+Addition and multiplication of rational numbers are commutative, which means the order of the two numbers does not change the result. Subtraction and division are not commutative. Addition and multiplication are also associative, which means that when three rational numbers are combined, the grouping of the numbers does not change the result. Subtraction and division are not associative.
+
+The number zero is called the additive identity for rational numbers, because adding zero to any rational number leaves it unchanged. The number one is called the multiplicative identity, because multiplying any rational number by one leaves it unchanged. For every rational number there exists an additive inverse, also called the negative of the number, such that their sum is zero. For every non-zero rational number there exists a multiplicative inverse, also called the reciprocal, such that their product is one. The reciprocal of p by q is q by p, provided both p and q are non-zero. Zero has no reciprocal.
+
+Multiplication is distributive over addition and over subtraction for rational numbers. This means that a times the quantity b plus c equals a times b plus a times c, and a times the quantity b minus c equals a times b minus a times c. The distributive property is useful for simplifying long expressions, because common factors can be taken out and the arithmetic becomes shorter.
+
+Rational numbers can be represented on a number line. To represent a rational number with denominator q, the unit length between two consecutive integers is divided into q equal parts, and the required number of parts is counted from zero, moving to the right for positive numbers and to the left for negative numbers. Every rational number has a definite point on the number line.
+
+Between any two given rational numbers there are countless rational numbers. This is unlike whole numbers or integers, where between two consecutive numbers there is nothing in between. One convenient way to find a rational number between two given rational numbers is to take their mean, that is, to add the two numbers and divide the sum by two; the result always lies between them. Repeating this process gives as many rational numbers between the two as required. Another method is to write both numbers with the same denominator, then increase the denominator by multiplying the numerator and denominator of both by the same number, which creates room for many numbers in between.
+
+A rational number is said to be in standard form if its denominator is a positive integer and the numerator and denominator have no common factor other than one. Any rational number can be reduced to standard form by dividing the numerator and the denominator by their highest common factor, and by making the denominator positive if it is negative. To compare two rational numbers, they are first written with a common positive denominator, after which the one with the greater numerator is the greater number. On the number line, a rational number lying to the right of another is always the greater of the two, so every positive rational number is greater than every negative rational number.

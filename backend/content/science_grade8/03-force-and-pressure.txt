@@ -1,0 +1,21 @@
+---
+subject: Science
+grade: 8
+chapter: Force and Pressure
+---
+
+A push or a pull on an object is called a force. Force is not something an object has on its own; it comes into play only when two objects interact with each other. Pushing, hitting, pulling and lifting are all ways of applying force. Because interaction is required, at least two objects must be involved before a force can be said to act.
+
+When two forces act on an object in the same direction, the net force is the sum of the two forces. When they act in opposite directions, the net force is the difference between the two, and it acts in the direction of the larger force. If two equal forces act in opposite directions, the net force on the object is zero and the forces are said to be balanced.
+
+A force applied on an object may change the state of motion of that object. The state of motion of an object is described by its speed and the direction of its motion. An object at rest is considered to be in a state of zero speed. A force may set a stationary object in motion, it may stop a moving object, it may change the speed of a moving object, and it may change the direction of motion. Force may also change the shape of an object, as when a rubber ball is pressed between the palms or a metal wire is bent. A single force may produce more than one of these effects at the same time.
+
+Forces are grouped into contact forces and non-contact forces. A muscular force is a contact force applied by the action of muscles; animals and humans use it to lift, push, pull and move objects, and muscular force also drives internal processes such as the movement of food in the food pipe and the beating of the heart. Friction is another contact force. It is the force that acts between the surfaces of two objects in contact and always opposes the relative motion between them. Friction is the reason a rolling ball on the ground slows down and finally stops.
+
+A force that acts on an object without being in contact with it is called a non-contact force. Magnetic force is a non-contact force: two magnets attract or repel each other without touching, and like poles repel while unlike poles attract. Electrostatic force is the force exerted by a charged body on another charged or uncharged body, and it too acts from a distance. Gravitational force is the force of attraction between any two objects in the universe; the earth pulls every object towards its centre, and this pull is the reason objects fall down when released. The gravitational force of the earth acting on an object is what gives that object its weight.
+
+The force acting on a unit area of a surface is called pressure. Pressure is equal to the force divided by the area on which it acts. For the same force, pressure is larger when the area is smaller, and smaller when the area is larger. This is why the edge of a knife is made sharp so that a small force produces a large pressure and cuts easily, why nails are given pointed tips, and why the wide straps of a heavy bag reduce the pressure felt on the shoulder. Similarly, porters place a round piece of cloth on their heads to increase the area of contact and reduce the pressure.
+
+Liquids and gases also exert pressure. A liquid exerts pressure on the walls of its container as well as on its base, and this pressure increases with depth, which is why the walls of a dam are made thicker at the bottom. Liquids exert equal pressure at the same depth. Gases exert pressure on the walls of their container in all directions; an inflated balloon keeps its shape because the enclosed air presses outward on the rubber.
+
+The envelope of air that surrounds the earth is called the atmosphere, and it extends up to many kilometres above the surface of the earth. The pressure exerted by this air is known as atmospheric pressure. The magnitude of atmospheric pressure is very large, and a large force acts on our bodies at all times. We are not crushed by it because the pressure of the blood and fluids inside our bodies balances the atmospheric pressure from outside. A simple demonstration is a rubber sucker pressed onto a smooth surface: air is pushed out from under it, and the atmospheric pressure acting from outside holds it firmly in place.

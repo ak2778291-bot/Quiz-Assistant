@@ -1,0 +1,64 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: edugen
+      POSTGRES_PASSWORD: edugen
+      POSTGRES_DB: edugen
+    ports:
+      - "5433:5432"
+    volumes:
+      - edugen_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U edugen -d edugen"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build: ./backend
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql+asyncpg://edugen:edugen@db:5432/edugen
+      JWT_SECRET: ${JWT_SECRET:-dev-secret-change-me}
+      # Set GEMINI_API_KEY in a .env file next to this compose file to use the
+      # real provider. Without it, LLM_PROVIDER=stub runs a grounded offline
+      # generator so `docker compose up` works out of the box.
+      LLM_PROVIDER: ${LLM_PROVIDER:-stub}
+      EMBEDDING_PROVIDER: ${EMBEDDING_PROVIDER:-local}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      CORS_ORIGINS: http://localhost:3000
+    ports:
+      - "8000:8000"
+
+  # Runs the ingestion script once against the corpus in backend/content,
+  # then exits. `docker compose up` blocks the frontend until it completes.
+  ingest:
+    build: ./backend
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql+asyncpg://edugen:edugen@db:5432/edugen
+      EMBEDDING_PROVIDER: ${EMBEDDING_PROVIDER:-local}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+    command: python -m scripts.ingest
+    restart: "no"
+
+  frontend:
+    build:
+      context: ./frontend
+      # Build arg, not a runtime env var: Next.js inlines NEXT_PUBLIC_* into the
+      # client bundle at build time. This is the origin the *browser* calls, so
+      # it stays localhost even though the container talks to `backend`.
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+    depends_on:
+      - backend
+    ports:
+      - "3000:3000"
+
+volumes:
+  edugen_pgdata:

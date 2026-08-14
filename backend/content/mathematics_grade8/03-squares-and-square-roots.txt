@@ -1,0 +1,21 @@
+---
+subject: Mathematics
+grade: 8
+chapter: Squares and Square Roots
+---
+
+If a natural number m can be expressed as n squared, where n is also a natural number, then m is called a square number or a perfect square. The numbers one, four, nine, sixteen, twenty five and thirty six are the first few square numbers. Square numbers are also called perfect squares because they can be arranged as a perfect square array of dots.
+
+Square numbers have several recognisable properties. A square number can only end with the digits zero, one, four, five, six or nine. No square number ends in two, three, seven or eight, so any number ending in one of those digits is certainly not a perfect square. If a number ends with an odd number of zeros, it is not a perfect square, because the number of zeros at the end of a perfect square is always even. The square of an even number is even and the square of an odd number is odd. Squares of numbers ending in one or nine end in one, squares of numbers ending in four or six end in six, and squares of numbers ending in five end in twenty five.
+
+There is a neat relation between square numbers and odd numbers. The sum of the first n odd natural numbers is equal to n squared. For example, one plus three plus five equals nine, which is three squared. It follows that any square number can be expressed as the sum of successive odd numbers starting from one, and conversely, a number that cannot be so expressed is not a perfect square. Another consequence is that between the squares of two consecutive numbers n and n plus one, there are exactly two n non-perfect square numbers.
+
+Some further patterns are useful for mental calculation. The difference between the squares of two consecutive numbers n and n plus one is two n plus one, which is the sum of the two numbers. For any natural number m greater than one, the three numbers two m, m squared minus one and m squared plus one form a Pythagorean triplet, because the sum of the squares of the first two equals the square of the third.
+
+Finding the number whose square is a given number is called finding the square root. Square root is the inverse operation of squaring. Every positive number has two integral square roots, one positive and one negative, but the positive square root is the one usually denoted by the radical sign. Zero has only one square root, which is zero itself.
+
+There are several methods of finding square roots. The method of repeated subtraction uses the property that a square number is the sum of successive odd numbers: successive odd numbers are subtracted from the given number, and if the result reaches zero after k subtractions, the square root is k. The prime factorisation method writes the number as a product of prime factors, pairs the identical factors, and takes one factor from each pair; the product of these gives the square root. This method also shows what a number must be multiplied or divided by to make it a perfect square, because the factor that has no pair is exactly the missing quantity.
+
+For large numbers, prime factorisation becomes lengthy and the long division method is used instead. In the long division method the digits of the number are grouped in pairs starting from the units place, with a bar placed over each pair. The number of bars gives the number of digits in the square root. The largest number whose square is less than or equal to the first group is taken as the first divisor and the first digit of the quotient, and the process continues by bringing down the next pair and doubling the quotient so far to form the new divisor.
+
+Square roots of decimal numbers are found by the same long division method, with the digits before the decimal point grouped in pairs from right to left and the digits after the decimal point grouped in pairs from left to right, adding a zero at the end if needed. To estimate a square root without full calculation, the given number is placed between the two nearest perfect squares, which gives the two consecutive whole numbers between which the square root lies.

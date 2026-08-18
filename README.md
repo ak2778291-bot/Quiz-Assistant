@@ -1,5 +1,4 @@
-# edugen.live
-
+# Quiz Assistant 
 A quiz platform where questions are generated **only from retrieved NCERT
 curriculum content** — never from the model's general knowledge — and each
 student's per-topic proficiency score, updated after every answer,

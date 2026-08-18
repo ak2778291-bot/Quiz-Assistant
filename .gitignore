@@ -10,6 +10,7 @@ node_modules/
 .next/
 out/
 next-env.d.ts
+*.tsbuildinfo
 
 # Environment
 .env
@@ -21,3 +22,7 @@ next-env.d.ts
 Thumbs.db
 .idea/
 .vscode/
+
+MASTER study plan.md
+MySpace/
+concepts to learn.md

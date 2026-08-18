@@ -287,10 +287,19 @@ async def test_topic_with_no_ingested_content_fails_gracefully(client: AsyncClie
     assert "general knowledge" in detail
 
     # No quiz row was created, and no proficiency was silently invented for a
-    # topic that cannot be quizzed.
+    # topic that cannot be quizzed — a phantom row would surface on the
+    # student's proficiency page as a topic they can never be quizzed on.
     async with SessionLocal() as session:
         quizzes = (await session.execute(select(Quiz))).scalars().all()
         assert all(q.topic != "photosynthesis-in-plants" for q in quizzes)
+
+        proficiencies = (await session.execute(select(Proficiency))).scalars().all()
+        assert all(p.topic != "photosynthesis-in-plants" for p in proficiencies)
+
+    # ...and the proficiency endpoint agrees.
+    me = (await client.get("/auth/me", headers=headers)).json()
+    body = (await client.get(f"/users/{me['id']}/proficiency", headers=headers)).json()
+    assert body["topics"] == []
 
 
 async def test_cache_serves_a_repeat_request_and_records_the_hit(client: AsyncClient):

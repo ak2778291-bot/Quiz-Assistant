@@ -23,7 +23,12 @@ from app.schemas import (
 )
 from app.services import cache as cache_service
 from app.services import proficiency as prof
-from app.services.quiz_service import create_quiz, get_or_create_proficiency, submit_answer
+from app.services.quiz_service import (
+    create_quiz,
+    get_or_create_proficiency,
+    read_proficiency,
+    submit_answer,
+)
 
 router = APIRouter(prefix="/quizzes", tags=["quizzes"])
 
@@ -65,11 +70,14 @@ async def _chapter_for(session, subject_id: int, topic: str) -> str:
 async def post_quiz(
     payload: CreateQuizRequest, user: CurrentUser, session: SessionDep
 ) -> QuizOut:
-    existing = await get_or_create_proficiency(
+    # Read-only, and deliberately not committed: creating the row here would
+    # leave a phantom proficiency entry behind whenever the request below is
+    # refused (unknown topic, no ingested content). `create_quiz` creates it
+    # once the request is known to be serviceable.
+    existing = await read_proficiency(
         session, user_id=user.id, subject_id=payload.subject_id, topic=payload.topic
     )
-    is_first = existing.answers_count == 0
-    await session.commit()
+    is_first = existing is None or existing.answers_count == 0
 
     try:
         quiz, result = await create_quiz(

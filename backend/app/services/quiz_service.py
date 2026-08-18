@@ -4,12 +4,14 @@ This module is where spec 4.1 (grounded generation) and 4.2 (adaptive
 selection) meet. The order of operations matters and is asserted by the
 integration test:
 
-  1. Read the student's current proficiency for (subject, topic).
+  1. Read the student's current proficiency for (subject, topic) -- a read,
+     never a write, so a request that is about to be refused leaves no trace.
   2. Turn that score into a difficulty mix -- deterministically, before any
      model call.
   3. Refuse outright if the topic has too little ingested content.
   4. Retrieve, then generate (or serve from cache), then re-validate grounding.
-  5. Persist the quiz with the score that produced it.
+  5. Persist the quiz with the score that produced it, creating the proficiency
+     row only now -- once every path that could still refuse has passed.
 """
 
 from __future__ import annotations
@@ -27,10 +29,18 @@ from app.services.llm import LLMClient
 from app.services.retrieval import count_chunks, retrieve
 
 
-async def get_or_create_proficiency(
+async def read_proficiency(
     session: AsyncSession, *, user_id: int, subject_id: int, topic: str
-) -> Proficiency:
-    row = (
+) -> Proficiency | None:
+    """Look up a proficiency row without creating one.
+
+    Callers that only need the *score* must use this rather than
+    `get_or_create_proficiency`: creating the row first means a request that is
+    subsequently refused (an unknown topic, a topic with no ingested content)
+    still leaves a phantom row behind, and the student's proficiency page then
+    lists a topic they can never be quizzed on.
+    """
+    return (
         await session.execute(
             select(Proficiency).where(
                 Proficiency.user_id == user_id,
@@ -39,6 +49,14 @@ async def get_or_create_proficiency(
             )
         )
     ).scalar_one_or_none()
+
+
+async def get_or_create_proficiency(
+    session: AsyncSession, *, user_id: int, subject_id: int, topic: str
+) -> Proficiency:
+    row = await read_proficiency(
+        session, user_id=user_id, subject_id=subject_id, topic=topic
+    )
     if row is None:
         row = Proficiency(
             user_id=user_id,
@@ -70,10 +88,16 @@ async def create_quiz(
         raise ContentNotAvailableError(topic=topic, found=0, required=1)
 
     # (1) + (2): the adaptive decision happens before anything expensive.
-    proficiency_row = await get_or_create_proficiency(
+    # This is a *read*: the row is only created at step (5), after every path
+    # that could still refuse the request has passed.
+    existing_proficiency = await read_proficiency(
         session, user_id=user_id, subject_id=subject_id, topic=topic
     )
-    score = float(proficiency_row.score)
+    score = (
+        float(existing_proficiency.score)
+        if existing_proficiency is not None
+        else prof.INITIAL_SCORE
+    )
     difficulties = prof.difficulty_sequence(score, n_questions)
     band = prof.score_to_band(score)
 
@@ -125,6 +149,13 @@ async def create_quiz(
         )
 
     # (5): persist, freezing the score that drove the difficulty.
+    # The proficiency row is created here and not earlier — everything above
+    # can still raise (unknown subject, no ingested content, an ungrounded or
+    # failed generation), and none of those requests should leave state behind.
+    await get_or_create_proficiency(
+        session, user_id=user_id, subject_id=subject_id, topic=topic
+    )
+
     quiz = Quiz(
         user_id=user_id,
         subject_id=subject_id,

@@ -1,8 +1,11 @@
 name: CI
 
 on:
+  # Both names: the repository's default branch is `master`, and a workflow
+  # pinned to `main` alone would never run on push here — the spec's definition
+  # of done is "tests pass in CI on push".
   push:
-    branches: [main]
+    branches: [main, master]
   pull_request:
 
 jobs:
